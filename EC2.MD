@@ -116,8 +116,8 @@ Example specifications. Note that there are other types of instances besides t2 
 `docker run -v $HOME:/data/ -it aomlomics/tourmaline`
 
 > Make sure your data is backed up – 
-> See [createbucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/createbucket.MD) on how to create a S3 bucket for data storage
-> See [CLI.MD](https://github.com/shenjean/cloud-classroom/blob/main/CLI.MD) contains instructions on how to copy files to/from your S3 bucket
+> * Refer to [createbucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/createbucket.MD) on how to create a S3 bucket for data storage
+> * Refer to [CLI.MD](https://github.com/shenjean/cloud-classroom/blob/main/CLI.MD) on how to copy files to/from your S3 bucket
 
 ## Clean up Amazon EC2 Resources
 
