@@ -121,10 +121,6 @@ Example specifications. Note that there are other types of instances besides t2 
 
 ## Clean up Amazon EC2 Resources
 
-Once you are done with your work, remember to terminate the cluster and
-empty/delete your designated Amazon S3 bucket (see [emptybucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/emptybucket.MD) to avoid additional
-charges.
-
 * If you had enabled **Termination Protection**, you will need to
     disable it before you can terminate your instance. On the EC2
     console, select your instance, then click on **Actions** -&gt;
@@ -145,3 +141,4 @@ charges.
 *  This will bring up the Terminate cluster prompt. Click on “Change”
     to turn off termination protection.
  
+* You should also empty/delete your designated Amazon S3 bucket to avoid additional charges - see [emptybucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/emptybucket.MD)
