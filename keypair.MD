@@ -53,7 +53,7 @@ pair.
 * If you will use an SSH client on a macOS or Linux computer to
     connect to your Linux instance, use the following command to set the
     permissions of your private key file so that only you can read it,
-    e.g.: chmod 400 keypairname.pem
+    e.g.: `chmod 400 keypairname.pem`
 
 > If you do not set these permissions, then you will get the following
 > error when connecting to your EC2/EMR instance:
