@@ -6,8 +6,8 @@ JupyterHub installed to access JupyterHub on his/her web browser. The
 JupyterHub server enables user(s) to create, view, and edit Jupyter
 notebooks. 
 
-Full guide here:
-<https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-jupyterhub.html>
+> Full guide here:
+> <https://docs.aws.amazon.com/emr/latest/ReleaseGuide/emr-jupyterhub.html>
 
 * Login to the EMR console: <https://console.aws.amazon.com/emr/> or click below:
 
