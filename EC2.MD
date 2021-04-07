@@ -27,7 +27,7 @@
 
 Example specifications. Users can choose from general purpose, compute optimized, memory optimized, accelerated computing (with GPU), and storage optimized instance types.
 
-| Instance   | vCPU\* | CPU Credits / hour | Mem (GiB) |  Storage | Network Performance |
+| Instance   | vCPU   | CPU Credits / hour | Mem (GiB) |  Storage | Network Performance |
 |------------|--------|--------------------|-----------|----------|---------------------|
 | t2.nano    |   1    |         3          |    0.5    | EBS-Only | Low                 |
 | t2.micro   |   1    |         6          |    1      | EBS-Only | Low to Moderate     |
@@ -126,14 +126,37 @@ Note that the username `ubuntu` is used by Ubuntu instances. Click on your insta
 
 ## Mount SSD volume(s) in an instance
 
-Some [instance types](https://aws.amazon.com/ec2/instance-types/) come with local NVMe-based SSDs that are physically connected to the host server. These SSDs provide block-level storage that is coupled to the lifetime of the instance. For example:
+Some [instance types](https://aws.amazon.com/ec2/instance-types/) come with local NVMe-based SSD(s) that are physically connected to the host server. The SSD(s) provide block-level storage that is coupled to the lifetime of the instance. For example:
 
-| Instance Size	 | vCPU\*|	Memory (GiB)| Instance Storage (GiB) |	Network Bandwidth (Gbps) |	EBS Bandwidth (Mbps) |
+| Instance Size	 | vCPU  |	Memory (GiB)| Instance Storage (GiB) |	Network Bandwidth (Gbps) |	EBS Bandwidth (Mbps) |
 |----------------|-------|--------------|------------------------|---------------------------|-----------------------|
 | c6gd.medium	 |  1	 |      2       |   1 x 59 NVMe SSD	     |      Up to 10             |	    Up to 4,750      |
 | c6gd.large	 |  2    |      4       |   1 x 118 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
 | c6gd.xlarge	 |  4	 |      8       |   1 x 237 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
 | c6gd.2xlarge   |  8	 |      16      |   1 x 474 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
+
+To use the SSD, you must mount it on your EC2 instance.
+
+* Check all your available volumes and identify the volume e.g. `nvme2n1` that needs to be mounted. Volumes that are mounted will have a directory listed under "Mountpoint"
+
+`lsblk`
+
+* To mount an external volume, first create a file system
+
+`sudo mkfs -t xfs /dev/nvme2n1`
+
+* If this doesn't work, install the `xfsprogs` file system software and rerun the `mkfs` command
+
+`sudo yum install xfsprogs`
+
+* Create a directory (eg volume1) where the volume will be mapped to
+
+`mkdir volume1`
+
+* Mount the volume to the new directory
+
+`sudo mount /dev/nvme2n1 volume1`
+
 
 ## Clean up Amazon EC2 Resources
 
