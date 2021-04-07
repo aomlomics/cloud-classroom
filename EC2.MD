@@ -25,17 +25,17 @@
 
 <img src="media/image4.png" style="width:6.5in;height:2.625in" alt="Table Description automatically generated" />
 
-Example specifications. Note that there are other types of instances besides t2 (e.g. T3, M4 etc).
+Example specifications. Users can choose from general purpose, compute optimized, memory optimized, accelerated computing (with GPU), and storage optimized instance types.
 
 | Instance   | vCPU\* | CPU Credits / hour | Mem (GiB) |  Storage | Network Performance |
 |------------|--------|--------------------|-----------|----------|---------------------|
-| t2.nano    | 1      | 3                  | 0.5       | EBS-Only | Low                 |
-| t2.micro   | 1      | 6                  | 1         | EBS-Only | Low to Moderate     |
-| t2.small   | 1      | 12                 | 2         | EBS-Only | Low to Moderate     |
-| t2.medium  | 2      | 24                 | 4         | EBS-Only | Low to Moderate     |
-| t2.large   | 2      | 36                 | 8         | EBS-Only | Low to Moderate     |
-| t2.xlarge  | 4      | 54                 | 16        | EBS-Only | Moderate            |
-| t2.2xlarge | 8      | 81                 | 32        | EBS-Only | Moderate            |
+| t2.nano    |   1    |         3          |    0.5    | EBS-Only | Low                 |
+| t2.micro   |   1    |         6          |    1      | EBS-Only | Low to Moderate     |
+| t2.small   |   1    |        12          |    2      | EBS-Only | Low to Moderate     |
+| t2.medium  |   2    |        24          |    4      | EBS-Only | Low to Moderate     |
+| t2.large   |   2    |        36          |    8      | EBS-Only | Low to Moderate     |
+| t2.xlarge  |   4    |        54          |    16     | EBS-Only | Moderate            |
+| t2.2xlarge |   8    |        81          |    32     | EBS-Only | Moderate            |
 
 *  In the next screen, you can configure your instance, for example,
     you can specify the number of cores and threads and more by checking
@@ -122,6 +122,18 @@ Note that the username `ubuntu` is used by Ubuntu instances. Click on your insta
 > Make sure your data is backed up – 
 > * Refer to [createbucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/createbucket.MD) on how to create a S3 bucket for data storage
 > * Refer to [CLI.MD](https://github.com/shenjean/cloud-classroom/blob/main/CLI.MD) on how to copy files to/from your S3 bucket
+
+
+## Mount SSD volume(s) in an instance
+
+Some [instance types](https://aws.amazon.com/ec2/instance-types/) come with local NVMe-based SSDs that are physically connected to the host server. These SSDs provide block-level storage that is coupled to the lifetime of the instance. For example:
+
+| Instance Size	 | vCPU\*|	Memory (GiB)| Instance Storage (GiB) |	Network Bandwidth (Gbps) |	EBS Bandwidth (Mbps) |
+|----------------|-------|--------------|------------------------|---------------------------|-----------------------|
+| c6gd.medium	 |  1	 |      2       |   1 x 59 NVMe SSD	     |      Up to 10             |	    Up to 4,750      |
+| c6gd.large	 |  2    |      4       |   1 x 118 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
+| c6gd.xlarge	 |  4	 |      8       |   1 x 237 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
+| c6gd.2xlarge   |  8	 |      16      |   1 x 474 NVMe SSD     |	    Up to 10             |	    Up to 4,750      |
 
 ## Clean up Amazon EC2 Resources
 
