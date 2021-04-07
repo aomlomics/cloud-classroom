@@ -102,6 +102,7 @@ Example specifications. Note that there are other types of instances besides t2 
 `ssh -i mykeypair.pem ec2-user@ec2-52-91-14-100.compute-1.amazonaws.com`
 
 Note that the username `ubuntu` is used by Ubuntu instances. Click on your instance ID, then click on the "Connect" button to double-check the username if ec2-user does not work.
+
 `ssh -i mykeypair.pem ubuntu@ec2-52-14-171-214.us-east-2.compute.amazonaws.com`
 
 <img src="media/image13.png" style="width:5.93056in;height:2.08333in" alt="Graphical user interface, text, application Description automatically generated" />
