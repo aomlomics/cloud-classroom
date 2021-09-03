@@ -157,10 +157,17 @@ To use the SSD, you must mount it on your EC2 instance.
 
 `sudo mount /dev/nvme2n1 volume1`
 
-## Get root access to your instance
+## Handy system commands
+
+### Get root access to your instance
 
 `sudo su`
 
+###  Install development tools on Amazon Linux AMI
+
+For your system to be able to compile software, you need to install several development tools, such as `make`, `gcc`, and `autoconf`. Because software compilation is not a task that every Amazon EC2 instance requires, these tools are not installed by default, but they are available in a package group called **Development Tools** that is easily added to an instance with the `yum groupinstall` command.
+
+`sudo yum groupinstall "Development Tools"`
 
 ## Clean up Amazon EC2 Resources
 
