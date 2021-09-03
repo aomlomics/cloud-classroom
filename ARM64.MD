@@ -1,12 +1,15 @@
 # Working with Amazon Linux-aarch64 (ARM64) architecture 
 
-##  Install development tools on Amazon Linux AMI
+[Amazon instances](https://aws.amazon.com/ec2/instance-types/) like C6g, M6g, and R6g are powered by ARM-based AWS Graviton2 processors. They deliver up better price performance over current generation instances. Additionally, local NVMe-based SSDs are physically connected to the host server and provide block-level storage that is coupled to the lifetime of the instance. Since ARM-based processors are relative new, many software developed and run on Intel's x86 and x84 processors are not yet compatible with the aarch64 (ARM64) architecture. Below are some Linux-aarch64 compatible software that have been tested on AWS:
+
+## General software
+###  Install development tools on Amazon Linux AMI
 
 For your system to be able to compile software, you need to install several development tools, such as `make`, `gcc`, and `autoconf`. Because software compilation is not a task that every Amazon EC2 instance requires, these tools are not installed by default, but they are available in a package group called **Development Tools** that is easily added to an instance with the `yum groupinstall` command.
 
 `sudo yum groupinstall "Development Tools"`
 
-## Install Anaconda
+### Install Anaconda
 
 Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/ 
 
@@ -22,4 +25,12 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 - Close and open your terminal window for the installation to take effect, or you can enter the command `source ~/.bashrc`
 
-## Bowtie2
+## Bioinformatics software
+
+### Bowtie2
+
+Download the latest release (e.g. bowtie2-2.4.4-linux-aarch64.zip) from: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml. The pre-compiled binaries are ready to use. 
+
+
+
+
