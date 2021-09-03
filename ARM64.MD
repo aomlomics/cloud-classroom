@@ -1,6 +1,8 @@
 # Working with Amazon Linux-aarch64 (ARM64) architecture 
 
-[Amazon instances](https://aws.amazon.com/ec2/instance-types/) like C6g, M6g, and R6g are powered by ARM-based AWS Graviton2 processors. They deliver up better price performance over current generation instances. Additionally, local NVMe-based SSDs are physically connected to the host server and provide block-level storage that is coupled to the lifetime of the instance. Since ARM-based processors are relative new, many software developed and run on Intel's x86 and x84 processors are not yet compatible with the aarch64 (ARM64) architecture. Below are some Linux-aarch64 compatible software that have been tested on AWS:
+[Amazon instances](https://aws.amazon.com/ec2/instance-types/) like C6g, M6g, and R6g are powered by ARM-based AWS Graviton2 processors. They deliver better price performance over current generation instances. Additionally, local NVMe-based SSDs are physically connected to the host server and provide block-level storage that is coupled to the lifetime of the instance. 
+
+Since ARM-based processors are relative new, many software developed and run on Intel's x86 and x84 processors are not yet compatible with the aarch64 (ARM64) architecture. Here are some Linux-aarch64 compatible software that have been tested on AWS:
 
 ## General software
 ###  Install development tools on Amazon Linux AMI
