@@ -29,7 +29,12 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 ### Docker
 
-`sudo yum install docker`
+- Install Docker: `sudo yum install docker`
+- Connect to the Docker daemon
+```
+sudo systemctl unmask docker
+sudo systemctl start docker
+```
 
 ### cmake
 
