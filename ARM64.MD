@@ -11,7 +11,11 @@ For your system to be able to compile software, you need to install several deve
 
 `sudo yum groupinstall "Development Tools"`
 
-### Install Anaconda
+### cmake
+
+Download binary distribution for Linux aarch64 from https://cmake.org/download/
+
+### Anaconda
 
 Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/ 
 
