@@ -31,6 +31,21 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 Download the latest release (e.g. bowtie2-2.4.4-linux-aarch64.zip) from: http://bowtie-bio.sourceforge.net/bowtie2/index.shtml. The pre-compiled binaries are ready to use. 
 
+### Samtools
 
+- Install pre-requisites
+
+```
+sudo yum install autoconf automake make gcc perl-Data-Dumper zlib-devel bzip2 bzip2-devel xz-devel curl-devel openssl-devel ncurses-devel
+```
+
+- Download and install latest release (e.g. samtools-1.13.tar.bz2) from https://github.com/samtools/samtools
+
+```
+tar -xf samtools-1.13.tar.bz2
+./configure
+make
+sudo make install
+```
 
 
