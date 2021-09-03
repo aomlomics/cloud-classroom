@@ -11,20 +11,6 @@ For your system to be able to compile software, you need to install several deve
 
 `sudo yum groupinstall "Development Tools"`
 
-### cmake
-
-Download binary distribution for Linux aarch64 from https://cmake.org/download/
-
-### Boost (C++ library)
-
-- Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
-```
-tar --bzip2 -xf /path/to/boost_1_77_0.tar.bz2
-cd /path/to/boost_1_77_0
-sudo ./bootstrap.sh
-sudo ./b2 install
-```
-
 ### Anaconda
 
 Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/ 
@@ -40,6 +26,25 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 - To control whether or not each shell session has the base environment activated or not, run  `conda config --set auto_activate_base False` or `True`
 
 - Close and open your terminal window for the installation to take effect, or you can enter the command `source ~/.bashrc`
+
+### Docker
+
+`sudo yum install docker`
+
+### cmake
+
+Download binary distribution for Linux aarch64 from https://cmake.org/download/
+
+### Boost (C++ library)
+
+- Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
+```
+tar --bzip2 -xf /path/to/boost_1_77_0.tar.bz2
+cd /path/to/boost_1_77_0
+sudo ./bootstrap.sh
+sudo ./b2 install
+```
+
 
 ## Bioinformatics software
 
