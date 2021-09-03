@@ -27,19 +27,6 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 - Close and open your terminal window for the installation to take effect, or you can enter the command `source ~/.bashrc`
 
-### Docker
-
-- Install Docker: `sudo yum install docker`
-- Connect to the Docker daemon
-```
-sudo systemctl unmask docker
-sudo systemctl start docker
-```
-
-### cmake
-
-Download binary distribution for Linux aarch64 from https://cmake.org/download/
-
 ### Boost (C++ library)
 
 - Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
@@ -49,7 +36,18 @@ cd /path/to/boost_1_77_0
 sudo ./bootstrap.sh
 sudo ./b2 install
 ```
+### cmake
 
+Download binary distribution for Linux aarch64 from https://cmake.org/download/
+
+### Docker
+
+- Install Docker: `sudo yum install docker`
+- Connect to the Docker daemon
+```
+sudo systemctl unmask docker
+sudo systemctl start docker
+```
 
 ## Bioinformatics software
 
