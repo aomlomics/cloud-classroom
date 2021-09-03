@@ -157,6 +157,10 @@ To use the SSD, you must mount it on your EC2 instance.
 
 `sudo mount /dev/nvme2n1 volume1`
 
+## Get root access to your instance
+
+`sudo su`
+
 
 ## Clean up Amazon EC2 Resources
 
