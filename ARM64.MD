@@ -15,6 +15,16 @@ For your system to be able to compile software, you need to install several deve
 
 Download binary distribution for Linux aarch64 from https://cmake.org/download/
 
+### Boost (C++ library)
+
+- Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
+```
+tar --bzip2 -xf /path/to/boost_1_77_0.tar.bz2
+cd /path/to/boost_1_77_0
+sudo ./bootstrap.sh
+sudo ./b2 install
+```
+
 ### Anaconda
 
 Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/ 
