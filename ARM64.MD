@@ -47,6 +47,25 @@ Run the following command to forward all requests on local port 8888 to port 888
 
 To login to Jupyter notebook server from your local browser, use this link: https://localhost:8888
 
+#### Add conda environment to Jupyter notebook kernal
+
+The environment below supports machine learning packages like Tensorflow and netCDF4
+
+`conda create -n ML python=3.7`
+
+Install packages
+```
+conda install tensorflow
+conda install netcdf4
+conda install xarray
+conda install ipykernel
+```
+
+Install kernel based on current conda environment
+`python -m ipykernel install --user --name ML`
+
+On your local browser, connect to your Jupyter notebook server and click refresh. You should be able to see a "ML" under the "New" button on the right of the window.
+
 ### Boost (C++ library)
 
 - Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
