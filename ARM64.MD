@@ -56,6 +56,7 @@ The environment below supports machine learning packages like Tensorflow and net
 Install packages
 ```
 conda install tensorflow
+conda install scikit-learn
 conda install netcdf4
 conda install xarray
 conda install ipykernel
