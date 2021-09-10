@@ -47,9 +47,9 @@ Run the following command to forward all requests on local port 8888 to port 888
 
 To login to Jupyter notebook server from your local browser, use this link: https://localhost:8888
 
-#### Add conda environment to Jupyter notebook kernal
+#### Add conda environment to Jupyter notebook kernel
 
-The environment below supports machine learning packages like Tensorflow and netCDF4
+The conda environment below supports basic machine learning packages
 
 `conda create -n ML python=3.7`
 
