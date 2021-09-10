@@ -31,6 +31,8 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 `conda install jupyter`
 
+`jupyter notebook`
+
 
 ### Boost (C++ library)
 
