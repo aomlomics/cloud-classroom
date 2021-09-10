@@ -29,10 +29,23 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 ### Jupyter notebook
 
+Instructions modified from https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-config.html
+
 `conda install jupyter`
+
+Start Jupyter Notebook server (more secure key self-signed SSL certificate in the [guide](https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-config.html) above)
 
 `jupyter notebook`
 
+Jupyter provides a password utility. Run the following command and enter your preferred password at the prompt.
+
+`jupyter notebook password`
+
+Run the following command to forward all requests on local port 8888 to port 8888 on your remote Amazon EC2 instance. Update the command by replacing the location of your key to access the Amazon EC2 instance and the public DNS name of your Amazon EC2 instance. This command is for Linux/MacOS. For Windows, refer to the [guide](https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-config.html).
+
+`ssh -i ~/mykeypair.pem -N -f -L 8888:localhost:8888 ubuntu@ec2-###-##-##-###.compute-1.amazonaws.com`
+
+To login to Jupyter notebook server from your local browser, use this link: https://localhost:8888
 
 ### Boost (C++ library)
 
