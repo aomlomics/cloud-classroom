@@ -58,6 +58,7 @@ Install packages
 conda install ipykernel
 conda install tensorflow
 conda install scikit-learn
+conda install xgboost
 conda install netcdf4
 conda install xarray
 conda install matplotlib
