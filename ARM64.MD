@@ -29,7 +29,7 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 ### Jupyter notebook
 
-`pip install --upgrade --force-reinstall --no-cache-dir jupyter`
+`conda install jupyter`
 
 
 ### Boost (C++ library)
