@@ -27,6 +27,11 @@ Instructions from https://docs.anaconda.com/anaconda/install/linux-aarch64/
 
 - Close and open your terminal window for the installation to take effect, or you can enter the command `source ~/.bashrc`
 
+### Jupyter notebook
+
+`pip install --upgrade --force-reinstall --no-cache-dir jupyter`
+
+
 ### Boost (C++ library)
 
 - Download and install from https://www.boost.org/doc/libs/1_77_0/more/getting_started/unix-variants.html
