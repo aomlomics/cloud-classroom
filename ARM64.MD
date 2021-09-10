@@ -55,11 +55,13 @@ The environment below supports machine learning packages like Tensorflow and net
 
 Install packages
 ```
+conda install ipykernel
 conda install tensorflow
 conda install scikit-learn
 conda install netcdf4
 conda install xarray
-conda install ipykernel
+conda install matplotlib
+conda install seaborn
 ```
 
 Install kernel based on current conda environment
