@@ -63,6 +63,7 @@ conda install netcdf4
 conda install xarray
 conda install matplotlib
 conda install seaborn
+conda install graphviz
 ```
 
 Install kernel based on current conda environment
