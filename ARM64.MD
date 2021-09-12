@@ -43,7 +43,7 @@ Jupyter provides a password utility. Run the following command and enter your pr
 
 Run the following command to forward all requests on local port 8888 to port 8888 on your remote Amazon EC2 instance. Update the command by replacing the location of your key to access the Amazon EC2 instance and the public DNS name of your Amazon EC2 instance. This command is for Linux/MacOS. For Windows, refer to the [guide](https://docs.aws.amazon.com/dlami/latest/devguide/setup-jupyter-config.html).
 
-`ssh -i ~/mykeypair.pem -N -f -L 8888:localhost:8888 ubuntu@ec2-###-##-##-###.compute-1.amazonaws.com`
+`ssh -i ~/mykeypair.pem -N -f -L 8888:localhost:8888 ec2-user@ec2-###-##-##-###.compute-1.amazonaws.com`
 
 To login to Jupyter notebook server from your local browser, use this link: https://localhost:8888
 
