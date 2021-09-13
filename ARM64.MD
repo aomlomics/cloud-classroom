@@ -63,10 +63,10 @@ conda install netcdf4
 conda install xarray
 conda install matplotlib
 conda install seaborn
-conda install graphviz
 ```
 
 Install kernel based on current conda environment
+
 `python -m ipykernel install --user --name ML`
 
 On your local browser, connect to your Jupyter notebook server and click refresh. You should be able to see a "ML" under the "New" button on the right of the window.
