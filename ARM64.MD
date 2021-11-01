@@ -115,5 +115,11 @@ tar -xf samtools-1.13.tar.bz2
 make
 sudo make install
 ```
+### atropos
+
+NGS read trimming tool that is specific, sensitive, and speedy
+
+`pip install atropos`
+
 
 
