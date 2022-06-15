@@ -2,12 +2,19 @@
 
 Click on the "Gear" icon on the "Compute" tab to open the configuration window. 
 
-* Project - From the drop down list box select the project to be charged for this work.
-* Access Public Key - to SSH to the Master node in your cluster from another host such as your laptop, you can put in your public key from that machine.
-* Max Workers - The maximum number of nodes
-* <b>Availability zone</b> must be set as `us-east-1c`
-* <b>efa</b> must be disabled 
-* The <b>Lustre</b> filesystem is for the reading and writing of huge files (terrabytes) and is expensive. Do not use unless absolutely accessary 
+| Field  | Description | 
+|------------|--------|
+| Resource Type | Select the type of resource (AWS, Google, Azure etc) that you would like to use, and whether you require an elastic instance or a cluster with job submission and scheduling (e.g. SLURM) |
+| Resource Account | Select the NOAA account to use for this work |
+| Multi Factor | No |
+| Jump Node | No |
+| Resource Project | Select the project to be charged for this work |
+| Multi User | Select Yes if you require multiple NOAA users to access the cluster. Otherwise, No |
+| Access Public Key | To access the cloud resource via SSH, you have to copy and paste your public key from the machine used for SSH access. See [here](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD) for instructions on how to generate a public key |
+| Max Workers | The maximum number of nodes in the cloud instance |
+| Availability zone | Must be `us-east-1c` |
+| EFA | Must be disabled |
+| Lustre | The Lustre filesystem is for the reading and writing of huge files (terrabytes) and is expensive. Do not use unless the regular EBS file systems do not meet your needs |
   
 Here is a configuration that works
 
