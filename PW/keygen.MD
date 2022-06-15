@@ -3,13 +3,13 @@
 ### Unix/MacOS
 Tutorial at https://www.ssh.com/academy/ssh/keygen
 
-If you are using Unix or MacOS laptop or computer to login to Parallel Works, run the command `ssh-keygen` without any arugments. In this case, In this case, it will prompt for the file in which to store keys. 
+From the computer that you will use to login to Parallel Works, run the command `ssh-keygen` on the terminal (for Unix/MacOS) or command prompt (for Windows) without any arguments. You will get a prompt for the file in which to store the generated keys: 
 
 ```
 Enter file in which to save the key (/Users/user/.ssh/id_rsa):
 ```
 
-Next, it will prompt for a passphrase. 
+Next, you will get a prompt for a passphrase. 
 ```
 Enter passphrase (empty for no passphrase):
 ```
