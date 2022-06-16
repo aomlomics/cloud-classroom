@@ -1,10 +1,12 @@
 ## Configure an AWS Cluster
 
-Before starting a cloud instance, you will have to configure the computing resources needed for that cloud instance. To do that, click on the <b>Resources</b> tab on [Parallel Works](https://noaa.parallel.works/u/resources) then click <b>Add Resource</b> to add a new resource. If you have an existing resource, click <b>Edit</b> to modify the configuration for a specified resource.
+Before starting a cloud instance, you will have to configure the computing resources needed for that cloud instance. To do that, click on the <b>Resources</b> tab on [Parallel Works](https://noaa.parallel.works/u/resources) then click <b>Add Resource</b> to add a new resource. If you have an existing resource, click <b>Edit</b> to modify the configuration for a specified resource. You can also <b>duplicate</b> your existing resource and make changes to the duplicated resource.
 
 <img src="media/Resources.png" style="width:3.77778in;height:2.13889in" alt="Parallel Work's Resources page" />
 
-Click on the "Gear" icon on the "Compute" tab to open the configuration window. 
+If you already have an existing resource, you can also click on the <b>Resource Configuration</b> gear/settings icon on the <b>Compute</b> tab to open the configuration window. 
+
+<img src="media/Gear.png" style="width:3.77778in;height:2.13889in" alt="Resource configuration on Parallel Work's Compute page" />
 
 | Field  | Description | 
 |------------|--------|
@@ -15,10 +17,24 @@ Click on the "Gear" icon on the "Compute" tab to open the configuration window.
 | Resource Project | Select the project to be charged for this work |
 | Multi User | Select Yes if you require multiple NOAA users to access the cluster. Otherwise, No |
 | Access Public Key | To access the cloud resource via SSH, you have to copy and paste your public key from the machine used for SSH access. See [here](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD) for instructions on how to generate a public key |
-| Max Workers | The maximum number of nodes in the cloud instance |
+| User Bootstrap | (optional) User-specific master node bootstrap script - you can use this to automatically execute a set of commands (run with your uid) upon cluster start |
+| Region | Must be `us-east-1` |
 | Availability zone | Must be `us-east-1c` |
+| Controller Instance Type | Choose an instance with the the appropriate memory, vCPUs, and architecture specifications for the controller instance which is used to submit jobs. Note: This is not the actual computing node |
+| Controller Image | Default: Latest |
+| Image Disk Name |  Select from drop-down menu |
+| Image Disk Count |  Specify number of disks for the image [default: 1] |
+| Image Disk Size GB | Specify disk size |
+| Add Partition | Click on the button to add computing nodes to the instance |
+| Name | Specify name of computing node |
+| Instance Type | Choose an instance with the the appropriate memory, vCPUs, and architecture specifications for the computing node |
+| Max Node Amount | The maximum number of computing nodes with this specification in the cloud instance |
+| Default | Yes |
+| Enable Spot | Not |
 | EFA | Must be disabled |
-| Lustre | The Lustre filesystem is for the reading and writing of huge files (terrabytes) and is expensive. Do not use unless the regular EBS file systems do not meet your needs |
+| Elastic Image | Default: Latest |
+| Zone | Must be `us-east-1c` |
+| Lustre | The Lustre filesystem is for quick reading and writing of HUGE files (TB scale?). It is very expensive. Do not use unless regular EBS file systems do not meet your needs |
   
 Here is a configuration that works
 
@@ -49,6 +65,8 @@ Here is a configuration that works
 "region":"us-east-1"
 }
 ```
+
+## Configure an AWS EC2 instance (workstation)
 
 ### Troubleshooting
 
