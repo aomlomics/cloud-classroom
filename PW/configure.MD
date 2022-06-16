@@ -10,7 +10,7 @@ If you already have an existing resource, you can also click on the <b>Resource 
 
 | Field  | Description | 
 |------------|--------|
-| Resource Type | Select the type of resource (AWS, Google, Azure etc) that you would like to use, and whether you require an elastic instance or a cluster with SLURM job submission and scheduling |
+| Resource Type | Default: AWS SLURM |
 | Resource Account | Select the NOAA account to use for this work |
 | Multi Factor | No |
 | Jump Node | No |
@@ -67,9 +67,7 @@ Here is a configuration that works
 }
 ```
 
-## Configure an AWS EC2 instance (workstation)
 
-In <b>Resource Account</b> field, choose the AWS <b>Elastic Cluster</b> instead of a Cloud Cluster. You get to choose the instance type and operating system and will need a key pair to access your cloud instance. Refer to [our tutorial](https://github.com/shenjean/cloud-classroom/blob/main/AWS/keypair.MD) on how to generate an AWD key pair file.
 
 
 
