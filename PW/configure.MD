@@ -1,5 +1,9 @@
 ## Configure an AWS Cluster
 
+Before starting a cloud instance, you will have to configure the computing resources needed for that cloud instance. To do that, click on the <b>Resources</b> tab on [Parallel Works](https://noaa.parallel.works/u/resources) then click <b>Add Resource</b> to add a new resource. If you have an existing resource, click <b>Edit</b> to modify the configuration for a specified resource.
+
+<img src="media/Resources.png" style="width:3.77778in;height:2.13889in" alt="Parallel Work's Resources page" />
+
 Click on the "Gear" icon on the "Compute" tab to open the configuration window. 
 
 | Field  | Description | 
