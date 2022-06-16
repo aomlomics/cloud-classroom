@@ -13,8 +13,9 @@ To get the IP address of the master node, click on the "i" button next to the Re
 If you created the cloud instance with your [public key](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD), you will be able to connect and transfer files to/from the master node without a password. For example:
 
 `ssh username@1.232.141.222`
-
+<br>
 `rsync file_to_transfer username@1.232.141.222:/contrib/username/`
+<br>
 `scp username@1.232.141.222:/contrib/username/file_to_transfer localfilename`
 
 ### Connnecting to the master node via Parallel Works IDE environment
