@@ -4,7 +4,6 @@ Once you have [configured your cluster](https://github.com/shenjean/cloud-classr
 
 <img src="media/Gear.png" style="width:3.77778in;height:2.13889in" alt="Resource configuration on Parallel Work's Compute page" />
 
-
 ### Connecting to the master node via SSH
 To get the IP address of the master node, click on the "i" button next to the Resource Configuration button. This opens the "Status" window that displays the IP address to be used to connect to the Master node. Click on the hyperlink next to the "Master node" to copy the IP address.
 
@@ -36,6 +35,12 @@ You can also upload or download files to the `/pw` directory of IDE environment 
 
 <img src="media/File.png" style="width:3.77778in;height:2.13889in" alt="SSH command"/>
 
+### File transfer via AWS-CLI
+
+* AWS command line interface (CLI) can be used to push and pull data from S3 buckets. To use CLI, load the "aws-utils" module: `module load aws-utils/latest`.
+
+* To copy files, `aws s3 cp test.txt s3://mybucket/test2.txt`
+
 ### Transient vs permanent storage
 
 Since Parallel Works creates on-demand clusters, all files in the `/home` directory of your instance are transient and will be deleted after the instance is shut down. Files in the `/contrib` volume, however, persists after a cluster is shutdown and can be used from any cloud instance. It is recommended to install common software such as conda and conda environments in the `/contrib/username/home` folder. A conda environment in the `/contrib` folder can be started up from a job script, for example:
@@ -49,3 +54,9 @@ conda activate /contrib/username/home/miniconda3/envs/CAMISIM
 cd /contrib/username/CAMISIM
 python metagenomesimulation.py defaults/config.ini
 ```
+
+### Software and modules
+
+* The AWS instances do not come with software pre-installed. There are pre-installed modules available and you can view or search for modules with the `module avail` or `module spider` command. To load, for example the AWS utility module, you can run `module load aws-utils/latest`.
+
+* The user who created an instance will have sysadmin rights to that instance. This makes it easy to install software system-wide. For example, to install the nano text editor, a user can run `sudo yum install nano` 
