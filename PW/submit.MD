@@ -1,10 +1,10 @@
 ## Submitting a job on your cloud instance
 
-The Parallel Works system creates an on-demand clusters, so the master node will be up and running until you shut it down. The remaining compute nodes will be turned on when jobs are submitted, will keep running as long as there are jobs, and will automatically shut down when they have been idle for five minutes. In order to use the compute nodes, a batch job using the Slurm scheduler must be submitted.
+The Parallel Works system creates an on-demand clusters, so the master node will be up and running until you shut it down. The remaining compute nodes will be turned on when jobs are submitted, will keep running as long as there are jobs, and will automatically shut down when they have been idle for five minutes. In order to use the compute nodes, a job must be submitted using the SLURM.
 
 ### Example SLURM job script
 
-Save the commands to be run in your job into a file, e.g. `testjob.sh`
+Save the commands to be run in your job into a file. This is the simplest example of a SLURM job script, `testjob.sh`
 
 ```sh
 #!/bin/bash
@@ -14,9 +14,10 @@ Save the commands to be run in your job into a file, e.g. `testjob.sh`
 echo "Hello world"
 ```
 
+In your SLURM job script, you can specify what resources you need to run your job, such as number of nodes, amount of memory, and amount of time. There are lots of tutorials on SLURM online, and [here](https://wiki.rc.usf.edu/index.php/Guide_to_SLURM) is one such tutorial.
+
 ### Submit a job
 `sbatch testjob.sh`
-
 
 ### Check status of a job
 * To check status of a job: `squeue -u username`
@@ -28,3 +29,10 @@ The status of a job is indicated in the `ST` column of the `squeue output`: R= R
 
 ### Cancel a job
 Use `squeue -u username` to first retrive the `JOBID`, then use `scancel` to cancel a job with the JOBID. For example, if the JOBID of a job is 27 then you would do: `scancel 27` to cancel that job.
+
+### Interactive job
+You can also start up an interactive job session with SLURM. This allows you to run scripts directly on the compute node. Here is the simplest example:
+
+`srun --job-name "Interactive" --pty bash`
+
+With `srun`, you can also specify what resources you need to run your job, such as number of nodes, amount of memory, and amount of time. 
