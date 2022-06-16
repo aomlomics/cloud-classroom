@@ -18,6 +18,7 @@ If you already have an existing resource, you can also click on the <b>Resource 
 | Multi User | Select Yes if you require multiple NOAA users to access the cluster. Otherwise, No |
 | Access Public Key | To access the cloud resource via SSH, you have to copy and paste your public key from the machine used for SSH access. See [here](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD) for instructions on how to generate a public key |
 | User Bootstrap | (optional) User-specific master node bootstrap script - you can use this to automatically execute a set of commands (run with your uid) upon cluster start |
+| Restore Configuration |  Restore configuration to default values |
 | Region | Must be `us-east-1` |
 | Availability zone | Must be `us-east-1c` |
 | Controller Instance Type | Choose an instance with the the appropriate memory, vCPUs, and architecture specifications for the controller instance which is used to submit jobs. Note: This is not the actual computing node |
