@@ -1,5 +1,14 @@
 # cloud-classroom
 
+## Using AWS cloud resources on NOAA Parallel Works
+
+| Topic   | Link | 
+|------------|--------|
+| Generate public key to access AWS instances | [keygen.MD](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD) |
+| Configure an AWS cluster | [configure.MD](https://github.com/shenjean/cloud-classroom/blob/main/PW/configure.MD) |
+| Start an AWS cluster | [start.MD](https://github.com/shenjean/cloud-classroom/blob/main/PW/start.MD) |
+| Submit a job to an AWS cluster | [submit.MD](https://github.com/shenjean/cloud-classroom/blob/main/PW/submit.MD) |
+
 ## Using AWS cloud resources on Amazon website
 
 
@@ -13,4 +22,3 @@
 | Using AWS CLI to copy files to/from S3 buckets and more | [CLI.MD](https://github.com/shenjean/cloud-classroom/blob/main/AWS/CLI.MD) |
 | Empty or delete an Amazon S3 bucket | [deletebucket.MD](https://github.com/shenjean/cloud-classroom/blob/main/AWS/emptybucket.MD) | 
 
-## Using AWS cloud resources on NOAA Parallel Works
