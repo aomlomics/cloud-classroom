@@ -10,12 +10,12 @@ If you already have an existing resource, you can also click on the <b>Resource 
 
 | Field  | Description | 
 |------------|--------|
-| Resource Type | Select the type of resource (AWS, Google, Azure etc) that you would like to use, and whether you require an elastic instance or a cluster with job submission and scheduling (e.g. SLURM) |
+| Resource Type | Select the type of resource (AWS, Google, Azure etc) that you would like to use, and whether you require an elastic instance or a cluster with SLURM job submission and scheduling |
 | Resource Account | Select the NOAA account to use for this work |
 | Multi Factor | No |
 | Jump Node | No |
 | Resource Project | Select the project to be charged for this work |
-| Multi User | Select Yes if you require multiple NOAA users to access the cluster. Otherwise, No |
+| Multi User | Choose between single user or multiuser cluster type. In a multi-user configuration, all members in a project can access the cluster. Cluster owner shares the master node IP address when it is up. On the right side under the “Settings” menu, there is a “Sharing” icon to share control of your multi-user cluster with the project members. Sharing enhances team collaboration and lets the team manage the cluster in owner’s absence. You can enable sharing before or during the life of a multi-user cluster. Once a multi-user cluster is started, the cluster owner is able to access the cluster from the various locations provided in the cluster’s Access Public Key field. The additional users (guest users) are symlinked from a `/contrib/USER/home` directory. Guest users can place their additional public keys in the `/contrib/USER/home/.ssh/authorized_keys` file to have their public keys propagated and saved to all compute nodes between cluster sessions. It is not possible for interns/non-NOAA users to use the cluster because access to the cloud has the same requirements as those for getting an account on the on-prem systems.  |
 | Access Public Key | To access the cloud resource via SSH, you have to copy and paste your public key from the machine used for SSH access. See [here](https://github.com/shenjean/cloud-classroom/blob/main/PW/keygen.MD) for instructions on how to generate a public key |
 | User Bootstrap | (optional) User-specific master node bootstrap script - you can use this to automatically execute a set of commands (run with your uid) upon cluster start |
 | Restore Configuration |  Restore configuration to default values |
@@ -69,10 +69,7 @@ Here is a configuration that works
 
 ## Configure an AWS EC2 instance (workstation)
 
-### Troubleshooting
+In <b>Resource Account</b> field, choose the AWS <b>Elastic Cluster</b> instead of a Cloud Cluster. You get to choose the instance type and operating system and will need a key pair to access your cloud instance. Refer to [our tutorial](https://github.com/shenjean/cloud-classroom/blob/main/AWS/keypair.MD) on how to generate an AWD key pair file.
 
-After starting the cluster, you can look at the log file to see if any problems are found:
 
-`sudo tail -f /var/log/slurm/elastic.log`
 
-This monitors system messages as the compute nodes are started up and can give clues on whether any computing node is stuck or if the node(s) are still working.
