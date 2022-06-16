@@ -17,11 +17,27 @@ If you created the cloud instance with your [public key](https://github.com/shen
 `rsync file_to_transfer username@1.232.141.222:/contrib/username/`
 `scp username@1.232.141.222:/contrib/username/file_to_transfer localfilename`
 
-### Connnecting to the master node via Parallel Works
+### Connnecting to the master node via Parallel Works IDE environment
+
+You can also use the IDE environment on the Parallel Works website to connect to your cluster. To do this, click on the IDE button on the top right corner of the screen:
+
+<img src="media/IDE.png" style="width:3.77778in;height:2.13889in" alt="IDE button" />
+
+From the IDE window, click on Terminal -> New Terminal to start a new Terminal window.
+
+<img src="media/Terminal.png" style="width:3.77778in;height:2.13889in" alt="Terminal window"/>
+
+In the Terminal window, ssh into the IP address of the master node to connect. 
+
+<img src="media/SSH.png" style="width:3.77778in;height:2.13889in" alt="SSH command"/>
+
+You can also upload or download files to the `/pw` directory of IDE environment by clicking on File -> Upload Files.. or File -> Download. Note that this filesystem is separate from the '/contrib' filesystem, so files uploaded will not be available on your cloud instances. They have to be copied over to your instances via `scp` or `rsync`.
+
+<img src="media/File.png" style="width:3.77778in;height:2.13889in" alt="SSH command"/>
 
 ### Transient vs permanent storage
 
-Since this is an on-demand cluster, all files in the `/home` directory are transient and will be deleted after the cluster is shut down. Files in the `/contrib` volume, however, persists after a cluster is shutdown and can be used from any cloud instance. It is recommended to install common software such as conda and conda environments in the `/contrib/username/home` folder. A conda environment in the `/contrib` folder can be started up from a job script, for example:
+Since Parallel Works creates on-demand clusters, all files in the `/home` directory of your instance are transient and will be deleted after the instance is shut down. Files in the `/contrib` volume, however, persists after a cluster is shutdown and can be used from any cloud instance. It is recommended to install common software such as conda and conda environments in the `/contrib/username/home` folder. A conda environment in the `/contrib` folder can be started up from a job script, for example:
 
 ```sh
 #!/bin/bash
