@@ -16,6 +16,10 @@ echo "Hello world"
 
 In your SLURM job script, you can specify what resources you need to run your job, such as number of nodes, amount of memory, and amount of time. There are lots of tutorials on SLURM online, and [here](https://wiki.rc.usf.edu/index.php/Guide_to_SLURM) is one such tutorial.
 
+### Conda environments
+
+It looks like the conda environment does not activate within the job script. To run a job within a conda environment, just activate the environment on the controller node before submitting the job, e.g. `conda activate biobakery3`.
+
 ### Submit a job
 `sbatch testjob.sh`
 
