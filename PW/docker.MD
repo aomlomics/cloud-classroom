@@ -35,6 +35,17 @@ In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmali
 ```
 
 ## Start Docker engine
-Docker is installed by default on each AWS instance. The only thing that needs to be done is to start the Docker engine: `sudo systemctl start docker`
+Docker is installed by default on each AWS instance. You will need to use `sudo` for most of Docker-related commands. First, let's start the Docker engine: `sudo systemctl start docker`
+
+## Pull Docker image
+`sudo docker pull aomlomics/tourmaline`
+
+## Start an interactive session on the computing node
+`srun --job-name "Tourmaline" --pty bash`
+
+## Run Docker container
+`sudo docker run -v $HOME:/data -it aomlomics/tourmaline`
+
+Follow the instructions on the [Tourmaline README](https://github.com/aomlomics/tourmaline) to run the setup and analysis for the test data.
 
 
