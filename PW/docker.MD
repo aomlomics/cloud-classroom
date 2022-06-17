@@ -2,6 +2,8 @@
 
 In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmaline](https://github.com/aomlomics/tourmaline) is an amplicon sequence processing workflow for Illumina sequence data that uses QIIME 2 and the software packages it wraps. Tourmaline manages commands, inputs, and outputs using the Snakemake workflow management system.
 
+## Create an AWS SLURM instance
+
 * Start up an AWS SLURM instance just sufficient enough to run Docker and Tourmaline's test dataset
 
 ```
@@ -31,3 +33,8 @@ In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmali
 ]
 }
 ```
+
+## Start Docker engine
+Docker is installed by default on each AWS instance. The only thing that needs to be done is to start the Docker engine: `sudo systemctl start docker`
+
+
