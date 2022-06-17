@@ -18,7 +18,9 @@ In your SLURM job script, you can specify what resources you need to run your jo
 
 ### Conda environments
 
-It looks like the conda environment does not activate within the job script. To run a job within a conda environment, just activate the environment on the controller node before submitting the job, e.g. `conda activate biobakery3`.
+* Once miniconda is installed in the `/contrib/user/home` folder, the next time a user starts up another instance, `conda init` can be run to reactivate conda. For example, `/contrib/user/home/miniconda3/bin/conda init`. Remember to restart the login session after running `conda init`. After restarting the session, a user can then run conda commands like `conda activate env_name`.
+
+* It looks like the conda environment does not activate within the job script. To run a job within a conda environment, just activate the environment on the controller node before submitting the job, e.g. `conda activate biobakery3` then `sbatch job.sh`.
 
 ### Submit a job
 `sbatch testjob.sh`
