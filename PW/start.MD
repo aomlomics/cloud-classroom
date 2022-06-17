@@ -59,4 +59,4 @@ python metagenomesimulation.py defaults/config.ini
 
 * The AWS instances do not come with software pre-installed, except for Docker and maybe few others. There are pre-installed modules available and you can view or search for modules with the `module avail` or `module spider` command. To load, for example the AWS utility module, you can run `module load aws-utils/latest`.
 
-* The user who created an instance will have sysadmin rights to that instance. This makes it easy to install software system-wide. For example, to install the nano text editor, a user can run `sudo yum install nano` in the instance, or in the User Bootstrap section when [configuring the resource](https://github.com/shenjean/cloud-classroom/blob/main/PW/configure.MD) to have nano installed during startup.
+* The user who created an instance will have sysadmin rights to that instance. This makes it easy to install software system-wide. For example, to install the nano text editor, a user can run `sudo yum install nano`.
