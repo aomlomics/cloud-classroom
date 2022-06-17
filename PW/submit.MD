@@ -1,6 +1,6 @@
 ## Submitting a job on your cloud instance
 
-The Parallel Works system creates an on-demand clusters, so the master node will be up and running until you shut it down. The remaining compute nodes will be turned on when jobs are submitted, will keep running as long as there are jobs, and will automatically shut down when they have been idle for five minutes. In order to use the compute nodes, a job must be submitted using the SLURM.
+The Parallel Works system creates an on-demand clusters, so the master node will be up and running until you shut it down. The remaining compute nodes will be turned on when jobs are submitted, will keep running as long as there are jobs, and will automatically shut down when they have been idle for five minutes. In order to use the compute nodes, a job must be submitted using SLURM.
 
 ### Example SLURM job script
 
