@@ -1,6 +1,8 @@
 # Running Docker on an AWS cluster instance
 
-In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmaline](https://github.com/aomlomics/tourmaline) is an amplicon sequence processing workflow for Illumina sequence data that uses QIIME 2 and the software packages it wraps. Tourmaline manages commands, inputs, and outputs using the Snakemake workflow management system.
+* Docker is installed by default on each AWS instance. You will need to use `sudo` for most Docker-related commands.
+
+* In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmaline](https://github.com/aomlomics/tourmaline) is an amplicon sequence processing workflow for Illumina sequence data that uses QIIME 2 and the software packages it wraps. Tourmaline manages commands, inputs, and outputs using the Snakemake workflow management system.
 
 ## Create an AWS SLURM instance
 
@@ -34,14 +36,14 @@ In this tutorial, we will try to run the Docker version of Tourmaline. [Tourmali
 }
 ```
 
-## Start Docker engine
-Docker is installed by default on each AWS instance. You will need to use `sudo` for most of Docker-related commands. First, let's start the Docker engine: `sudo systemctl start docker`
-
 ## Pull Docker image
 `sudo docker pull aomlomics/tourmaline`
 
 ## Start an interactive session on the computing node
 `srun --job-name "Tourmaline" --pty bash`
+
+## Start Docker engine on computing node
+Docker is installed by default on each AWS instance. You will need to use `sudo` for most of Docker-related commands. First, let's start the Docker engine: `sudo systemctl start docker`
 
 ## Run Docker container
 `sudo docker run -v $HOME:/data -it aomlomics/tourmaline`
