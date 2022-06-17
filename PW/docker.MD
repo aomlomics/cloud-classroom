@@ -36,9 +36,6 @@
 }
 ```
 
-## Pull Docker image
-`sudo docker pull aomlomics/tourmaline`
-
 ## Start an interactive session on the computing node
 `srun --job-name "Tourmaline" --pty bash`
 
