@@ -29,9 +29,9 @@ In your SLURM job script, you can specify what resources you need to run your jo
 * To check status of a job: `squeue -u username`
 The status of a job is indicated in the `ST` column of the `squeue output`: R= Running, CF= Compute node is being booted up.
 
-> If a compute node is not starting up, you can look at the log file to see if any problems are found:
-> `sudo tail -f /var/log/slurm/elastic.log`
-> This monitors system messages as the compute nodes are started up and can give clues on whether any computing node is stuck or if the node(s) are still working.
+* If a compute node is not starting up (stuck at CF), you can look at the log file to see if any problems are found:
+`sudo tail -f /var/log/slurm/elastic.log`
+This monitors system messages as the compute nodes are started up and can give clues on whether any computing node is stuck or if the node(s) are still working. Sometimes, it could be that the computing node does not have enough processors to perform the job as specified.
 
 ### Cancel a job
 Use `squeue -u username` to first retrive the `JOBID`, then use `scancel` to cancel a job with the JOBID. For example, if the JOBID of a job is 27 then you would do: `scancel 27` to cancel that job.
