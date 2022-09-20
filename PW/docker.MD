@@ -42,9 +42,11 @@
 ## Start Docker engine on computing node
 Docker is installed by default on each AWS instance. You will need to use `sudo` for most of Docker-related commands. First, let's start the Docker engine: `sudo systemctl start docker`
 
+## Download Docker image
+
+`sudo docker pull aomlomics/tourmaline`
+
 ## Run Docker container
 `sudo docker run -v $HOME:/data -it aomlomics/tourmaline`
 
 Follow the instructions on the [Tourmaline README](https://github.com/aomlomics/tourmaline) to run the setup and analysis for the test data.
-
-
