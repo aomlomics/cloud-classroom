@@ -22,3 +22,5 @@ The public key file will look like a longer version of this:
 ```
 ssh-rsa AABAB3ZzQbevrCC9/K6g529KVeW+nxE5cbgSf30SqPRYGxkeLuT8VnBnJpiuk= user@computer
 ```
+
+If you don't want to add the access key every time you create a new instance, you can go to your Account menu, then the Authentication tab and add your public key with the +Add SSH Key button. This will automatically add your key to every new instance, and you can have multiple keys added to your account.
