@@ -24,3 +24,6 @@ ssh-rsa AABAB3ZzQbevrCC9/K6g529KVeW+nxE5cbgSf30SqPRYGxkeLuT8VnBnJpiuk= user@comp
 ```
 
 If you don't want to add the access key every time you create a new instance, you can go to your Account menu, then the Authentication tab and add your public key with the +Add SSH Key button. This will automatically add your key to every new instance, and you can have multiple keys added to your account.
+
+<img src="media/ssh_key.png" style="width:3.77778in;height:2.13889in" alt="Setting an SSH key in your Parallel Works account" />
+
